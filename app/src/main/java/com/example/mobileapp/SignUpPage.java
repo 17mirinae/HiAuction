@@ -18,8 +18,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class SignUpPage extends AppCompatActivity {
-    final static private String URL = "http://cslin.skuniv.ac.kr/~chungmj1767/Mobile/SignUpPHP.php";
-
     Button signUpBtn;
     EditText userIdEdit, userPwdEdit, userAddrEdit, userPhoneEdit;
     String userId, userPwd, userAddr, userPhone;
@@ -30,7 +28,7 @@ public class SignUpPage extends AppCompatActivity {
         setContentView(R.layout.signuppage);
         setTitle("회원가입");
 
-        Button signUpBtn = (Button) findViewById(R.id.signUpBtn);
+        signUpBtn = (Button) findViewById(R.id.signUpBtn);
 
         userIdEdit = (EditText) findViewById(R.id.userIdEdit);
         userPwdEdit = (EditText) findViewById(R.id.userPwdEdit);
@@ -40,10 +38,10 @@ public class SignUpPage extends AppCompatActivity {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userId = userIdEdit.getText().toString();
-                userPwd = userPwdEdit.getText().toString();
-                userAddr = userAddrEdit.getText().toString();
-                userPhone = userPhoneEdit.getText().toString();
+                userId = userIdEdit.getText().toString().trim();
+                userPwd = userPwdEdit.getText().toString().trim();
+                userAddr = userAddrEdit.getText().toString().trim();
+                userPhone = userPhoneEdit.getText().toString().trim();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -68,9 +66,9 @@ public class SignUpPage extends AppCompatActivity {
                     }
                 }; // Response.Listener<String> End
 
-                RegisterRequest registerRequest = new RegisterRequest(userId, userPwd, userAddr, userPhone, responseListener);
+                SignUpRequest signUpRequest = new SignUpRequest(userId, userPwd, userAddr, userPhone, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(SignUpPage.this);
-                queue.add(registerRequest);
+                queue.add(signUpRequest);
             } // onClick End
         }); // signUpBtn.setOnClickListener End
     }
