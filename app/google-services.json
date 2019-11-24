@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "708519224632",
+    "firebase_url": "https://hiauc-ea3fb.firebaseio.com",
+    "project_id": "hiauc-ea3fb",
+    "storage_bucket": "hiauc-ea3fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708519224632:android:4692f12d9e3bbdd1c88dcd",
+        "android_client_info": {
+          "package_name": "com.example.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708519224632-b28ijcibr4u9m5cq8d4nnjhl1aaa7unm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRCMgvaZWi9ob0ojagqayy_r7oTdqS7GA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708519224632-b28ijcibr4u9m5cq8d4nnjhl1aaa7unm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
