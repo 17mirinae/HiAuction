@@ -38,10 +38,10 @@ public class SignUpPage extends AppCompatActivity {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userId = userIdEdit.getText().toString().trim();
-                userPwd = userPwdEdit.getText().toString().trim();
-                userAddr = userAddrEdit.getText().toString().trim();
-                userPhone = userPhoneEdit.getText().toString().trim();
+                userId = userIdEdit.getText().toString();
+                userPwd = userPwdEdit.getText().toString();
+                userAddr = userAddrEdit.getText().toString();
+                userPhone = userPhoneEdit.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
