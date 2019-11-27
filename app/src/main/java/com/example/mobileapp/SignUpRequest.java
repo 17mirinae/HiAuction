@@ -1,29 +1,33 @@
 package com.example.mobileapp;
 
+import android.util.Log;
+
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SignUpRequest extends StringRequest {
-    final static private String URL = "http://cslin.skuniv.ac.kr/~chungmj1767/HiAuction/SignUpPHP.php";
+    static private String URL = "http://cslin.skuniv.ac.kr/~chungmj1767/HiAuction/SignUpPHP.php";
     private Map<String, String> params;
 
     public SignUpRequest(String userId, String userPwd, String userAddr, String userPhone, Response.Listener<String> listener) {
-        super(Method.POST, URL, listener, null);
+        super(Method.POST, URL, listener, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("Error", "[" + error.getMessage() + "]");
+            }
+        });
         params = new HashMap<>();
-
-        System.out.println("This is Log");
-        System.out.println(userId);
-        System.out.println(userPwd);
-        System.out.println(userAddr);
-        System.out.println(userPhone);
 
         params.put("userId", userId);
         params.put("userPwd", userPwd);
         params.put("userAddr", userAddr);
         params.put("userPhone", userPhone);
+
+        System.out.println(getParams());
     }
 
     @Override

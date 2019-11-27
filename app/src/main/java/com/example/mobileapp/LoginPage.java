@@ -17,7 +17,7 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("중고거래");
+        setTitle("Mobile Final");
 
         userIdEdit = (EditText) findViewById(R.id.userIdEdit);
         userPwdEdit = (EditText) findViewById(R.id.userPwdEdit);
