@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="상세 설명을 입력해주세요"/>
+        android:hint="상세 설명을 입력해주세요"/>
 
     <Button
         android:id="@+id/postUploadBtn"

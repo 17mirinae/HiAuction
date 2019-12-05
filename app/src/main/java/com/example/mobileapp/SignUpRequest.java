@@ -15,7 +15,7 @@ public class SignUpRequest extends StringRequest {
 
     public SignUpRequest(String userId, String userPwd, String userAddr, String userPhone, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, new Response.ErrorListener() {
-            @Override
+                @Override
             public void onErrorResponse(VolleyError error) {
                 Log.d("Error", "[" + error.getMessage() + "]");
             }
