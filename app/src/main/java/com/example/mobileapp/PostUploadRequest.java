@@ -9,11 +9,11 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SignUpRequest extends StringRequest {
-    static private String URL = "http://cslin.skuniv.ac.kr/~chungmj1767/HiAuction/SignUpPHP.php";
+public class PostUploadRequest extends StringRequest {
+    static private String URL = "http://cslin.skuniv.ac.kr/~chungmj1767/HiAuction/PostUploadPHP.php";
     private Map<String, String> params;
 
-    public SignUpRequest(String userId, String userPwd, String userAddr, String userPhone, Response.Listener<String> listener) {
+    public PostUploadRequest(String Title, String Writer, String Content, String CreatedTime, Response.Listener<String> listener) {
         super(Method.POST, URL, listener, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -22,10 +22,10 @@ public class SignUpRequest extends StringRequest {
         });
         params = new HashMap<>();
 
-        params.put("Id", userId);
-        params.put("Pwd", userPwd);
-        params.put("Addr", userAddr);
-        params.put("Phone", userPhone);
+        params.put("Title", Title);
+        params.put("Writer", Writer);
+        params.put("Content", Content);
+        params.put("CreatedTime", CreatedTime);
 
         System.out.println(getParams());
     }
