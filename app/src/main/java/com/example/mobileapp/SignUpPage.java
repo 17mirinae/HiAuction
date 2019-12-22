@@ -20,7 +20,7 @@ import org.json.JSONObject;
 public class SignUpPage extends AppCompatActivity {
     Button signUpBtn;
     EditText userIdEdit, userPwdEdit, userAddrEdit, userPhoneEdit;
-    String userId, userPwd, userAddr, userPhone;
+    String Id, Pwd, Addr, Phone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +38,12 @@ public class SignUpPage extends AppCompatActivity {
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                userId = userIdEdit.getText().toString();
-                userPwd = userPwdEdit.getText().toString();
-                userAddr = userAddrEdit.getText().toString();
-                userPhone = userPhoneEdit.getText().toString();
+                Id = userIdEdit.getText().toString();
+                Pwd = userPwdEdit.getText().toString();
+                Addr = userAddrEdit.getText().toString();
+                Phone = userPhoneEdit.getText().toString();
 
+                System.out.println("signUpBtn Clicked...");
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -66,7 +67,7 @@ public class SignUpPage extends AppCompatActivity {
                     }
                 }; // Response.Listener<String> End
 
-                SignUpRequest signUpRequest = new SignUpRequest(userId, userPwd, userAddr, userPhone, responseListener);
+                SignUpRequest signUpRequest = new SignUpRequest(Id, Pwd, Addr, Phone, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(SignUpPage.this);
                 queue.add(signUpRequest);
             } // onClick End

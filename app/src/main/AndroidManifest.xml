@@ -26,6 +26,7 @@
         </activity>
         <activity android:name=".SignUpPage"/>
         <activity android:name=".PostUploadPage"/>
+        <activity android:name=".MainPage"/>
     </application>
 
 </manifest>

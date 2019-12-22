@@ -22,10 +22,10 @@ public class SignUpRequest extends StringRequest {
         });
         params = new HashMap<>();
 
-        params.put("userId", userId);
-        params.put("userPwd", userPwd);
-        params.put("userAddr", userAddr);
-        params.put("userPhone", userPhone);
+        params.put("Id", userId);
+        params.put("Pwd", userPwd);
+        params.put("Addr", userAddr);
+        params.put("Phone", userPhone);
 
         System.out.println(getParams());
     }
