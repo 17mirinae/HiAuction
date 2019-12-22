@@ -26,6 +26,7 @@ public class PostUploadRequest extends StringRequest {
         params.put("Writer", Writer);
         params.put("Content", Content);
         params.put("CreatedTime", CreatedTime);
+        // params.put("Image", Image);
 
         System.out.println(getParams());
     }

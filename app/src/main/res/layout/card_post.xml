@@ -29,7 +29,7 @@
             android:textSize="20dp"
             android:background="#77CCCCCC"
             android:gravity="center"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:id="@+id/postNumTextPostCard"
             android:textSize="20dp"
             android:gravity="top"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
@@ -45,6 +45,6 @@
             android:id="@+id/writerTextPostCard"
             android:textSize="20dp"
             android:gravity="right"
-            tools:ignore="MissingConstraints"/>
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

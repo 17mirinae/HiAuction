@@ -29,7 +29,7 @@ public class PostUploadPage extends AppCompatActivity {
 
     SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
-    String title, content, writer, createdTime;
+    String title, content, writer, createdTime, image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +58,8 @@ public class PostUploadPage extends AppCompatActivity {
                 title = titleEdit.getText().toString();
                 content = contentEdit.getText().toString();
                 createdTime = sdfNow.format(date);
+//                image = imageView.getDrawable().toString();
+//                System.out.println("ImageView to String : " + image);
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
